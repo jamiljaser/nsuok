@@ -52,24 +52,7 @@ html.reveal-full-page {
 .quote {text-align: left; font-size:80%; text-indent: 30px;}
 .citation {font-size:80%; padding-left: 30px; text-align: left; text-indent: -30px;}
 
-// https://stackoverflow.com/questions/35237862/best-way-to-handle-overflowing-reveal-js-slide
-// Creates scrollable slide -- uses script found in myScript.js
-.scrollable-slide {
-    height: 800px;
-    overflow-y: auto !important;
-}
-::-webkit-scrollbar {
-    width: 6px;
-}
-::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-}
-::-webkit-scrollbar-thumb {
-  background-color: #333;
-}
-::-webkit-scrollbar-corner {
-  background-color: #333;
-}
+
 
 /*********************************************
  * VIEW FRAGMENTS
