@@ -56,7 +56,7 @@ new RGBELoader().load(hdrUrl2, texture => {
   })
 
 // GLTF Loader
-loader.load(' ../GLTF/brainScene.glb', function(gltf){
+loader.load(' ../GLTF/brainScene.gltf', function(gltf){
 // loader.load(' ../GLTF/ornateDisplayBox/ornateDisplayBox.gltf', function(gltf){
         // console.log(gltf)
         const root = gltf.scene;
