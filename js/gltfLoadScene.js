@@ -16,7 +16,8 @@ const loader = new GLTFLoader();
 
 
 // Draco Loader
-const dracoPath = 'https://cdn.jsdelivr.net/npm/three@0.121.1/examples/js/libs/draco/';
+// const dracoPath = 'https://cdn.jsdelivr.net/npm/three@0.121.1/examples/js/libs/draco/';
+const dracoPath = '/draco/'
 const myDracoLoader = new DRACOLoader();
 myDracoLoader.setDecoderPath(dracoPath);
 loader.setDRACOLoader(myDracoLoader)
