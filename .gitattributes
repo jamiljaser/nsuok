@@ -1,2 +1,0 @@
-# User-specific files
-*.glb filter=lfs diff=lfs merge=lfs -binary
