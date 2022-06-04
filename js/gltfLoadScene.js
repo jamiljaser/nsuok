@@ -1,9 +1,10 @@
-import * as THREE from 'https://cdn.skypack.dev/three@0.121.1/build/three.module.js'
+// import * as THREE from 'https://cdn.skypack.dev/three@0.121.1/build/three.module.js';
+import * as THREE from "../three/three.module"
 import { GLTFLoader } from "https://cdn.jsdelivr.net/npm/three@0.121.1/examples/jsm/loaders/GLTFLoader.js";
 import { OrbitControls } from 'https://cdn.skypack.dev/three@0.121.1/examples/jsm/controls/OrbitControls.js';
 import { RGBELoader } from 'https://cdn.skypack.dev/three@0.121.1/examples/jsm/loaders/RGBELoader.js';
-import {DRACOLoader} from 'https://cdn.jsdelivr.net/npm/three@0.121.1/examples/jsm/loaders/DRACOLoader.js'
-
+// import {DRACOLoader} from 'https://cdn.jsdelivr.net/npm/three@0.121.1/examples/jsm/loaders/DRACOLoader.js'
+import "../js/DRACOLoader.js";
 
 // INITIALIZE
 
