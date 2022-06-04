@@ -182,12 +182,12 @@ function readDir(){
 // buttonMaker
 function buttonMkr(filename){
 // put this in a for statement
-    let bttn = document.createElement("button");
-    document.getElementById("bttnContainer").appendChild(bttn);
-    bttn.setAttribute("class", "modelListBttn");
-    bttn.setAttribute("id", filename)
-    // bttn.setAttribute("id", name this by concatination of the array item's file name minus the file format suffix)
-    bttn.addEventListener("click", switchBuilding, false);
+    // let bttn = document.createElement("button");
+    // document.getElementById("bttnContainer").appendChild(bttn);
+    // bttn.setAttribute("class", "modelListBttn");
+    // bttn.setAttribute("id", filename)
+    // // bttn.setAttribute("id", name this by concatination of the array item's file name minus the file format suffix)
+    // bttn.addEventListener("click", switchBuilding, false);
     // console.log(scene.children)
 // end the for statement here
 }
