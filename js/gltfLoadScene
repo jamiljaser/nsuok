@@ -1,10 +1,9 @@
-import * as THREE from 'https://cdn.skypack.dev/three@0.121.1/build/three.module.js';
-// import * as THREE from "../three/three.module";
+import * as THREE from 'https://cdn.skypack.dev/three@0.121.1/build/three.module.js'
 import { GLTFLoader } from "https://cdn.jsdelivr.net/npm/three@0.121.1/examples/jsm/loaders/GLTFLoader.js";
 import { OrbitControls } from 'https://cdn.skypack.dev/three@0.121.1/examples/jsm/controls/OrbitControls.js';
 import { RGBELoader } from 'https://cdn.skypack.dev/three@0.121.1/examples/jsm/loaders/RGBELoader.js';
 import {DRACOLoader} from 'https://cdn.jsdelivr.net/npm/three@0.121.1/examples/jsm/loaders/DRACOLoader.js'
-import "../js/DRACOLoader.js";
+
 
 // INITIALIZE
 
@@ -17,8 +16,7 @@ const loader = new GLTFLoader();
 
 
 // Draco Loader
-// const dracoPath = 'https://cdn.jsdelivr.net/npm/three@0.121.1/examples/js/libs/draco/';
-const dracoPath = '/draco/';
+const dracoPath = 'https://cdn.jsdelivr.net/npm/three@0.121.1/examples/js/libs/draco/';
 const myDracoLoader = new DRACOLoader();
 myDracoLoader.setDecoderPath(dracoPath);
 loader.setDRACOLoader(myDracoLoader)
@@ -58,11 +56,11 @@ new RGBELoader().load(hdrUrl2, texture => {
   })
 
 // GLTF Loader
-loader.load(' ../GLTF/brainScene.glb', function(gltf){
+loader.load(' ../GLTF/BaconeHouse/BaconeHouseScanTsalageek2022-draco2.gltf', function(gltf){
 // loader.load(' ../GLTF/ornateDisplayBox/ornateDisplayBox.gltf', function(gltf){
         // console.log(gltf)
         const root = gltf.scene;
-        root.scale.set(1,1 ,1)
+        root.scale.set(500,500,500)
         let mesh = gltf.scene.children[0];
         
         // fixes shadow artifacts
@@ -85,8 +83,8 @@ loader.load(' ../GLTF/brainScene.glb', function(gltf){
 // LIGHTS declarations
 
 // Hemisphere Light
-// const hemiLight = new THREE.HemisphereLight(0xffeeb1, 0x080820, 8);
-// scene.add(hemiLight);
+const hemiLight = new THREE.HemisphereLight(0xffeeb1, 0x080820, 8);
+scene.add(hemiLight);
 
 // overhead spot light
 const lightOverhead = new THREE.SpotLight(0xffff11, 7)
@@ -95,27 +93,27 @@ lightOverhead.castShadow = true;
 lightOverhead.shadow.bias = -0.0001;
 lightOverhead.shadow.mapSize.width = 1024*4;
 lightOverhead.shadow.mapSize.height = 1024*4;
-// scene.add(lightOverhead)
+scene.add(lightOverhead)
 
 // ----------------------------------------------------------------
 
 
 // GEOMETRY declarations
-// const plane = new THREE.PlaneGeometry(100,100);
-//     // greenMaterial
+const plane = new THREE.PlaneGeometry(100,100);
+    // greenMaterial
 const materialGreen = new THREE.MeshBasicMaterial({
     color: 0x00ff00
 });
 
     // purpleMaterial
-// const materialPurple = new THREE.MeshBasicMaterial({
-    // color: 0xff00ff, side: THREE.Doubleside
-// });
+const materialPurple = new THREE.MeshBasicMaterial({
+    color: 0xff00ff, side: THREE.Doubleside
+});
     // groundPlane
-// const groundPlane = new THREE.Mesh(plane, materialPurple)
-// scene.add(groundPlane)
-// groundPlane.rotateX(-33)
-// groundPlane.position.set(0,-1.25,0)
+const groundPlane = new THREE.Mesh(plane, materialPurple)
+scene.add(groundPlane)
+groundPlane.rotateX(-33)
+groundPlane.position.set(0,-1.25,0)
 // -------------------------------------------------------------------------
 
 // Camera and renderer declarations
@@ -184,12 +182,12 @@ function readDir(){
 // buttonMaker
 function buttonMkr(filename){
 // put this in a for statement
-    // let bttn = document.createElement("button");
-    // document.getElementById("bttnContainer").appendChild(bttn);
-    // bttn.setAttribute("class", "modelListBttn");
-    // bttn.setAttribute("id", filename)
-    // // bttn.setAttribute("id", name this by concatination of the array item's file name minus the file format suffix)
-    // bttn.addEventListener("click", switchBuilding, false);
+    let bttn = document.createElement("button");
+    document.getElementById("bttnContainer").appendChild(bttn);
+    bttn.setAttribute("class", "modelListBttn");
+    bttn.setAttribute("id", filename)
+    // bttn.setAttribute("id", name this by concatination of the array item's file name minus the file format suffix)
+    bttn.addEventListener("click", switchBuilding, false);
     // console.log(scene.children)
 // end the for statement here
 }
