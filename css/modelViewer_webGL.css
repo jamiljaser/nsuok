@@ -1,0 +1,98 @@
+.body{
+    min-width: 300px;
+    background-color: rgb(0, 0, 0);
+}
+.header{
+    margin-left: 0px;
+    margin-right: 0px;
+    align-self: center;
+    height: 50px;
+    align-content: center;
+    max-width: 1282px;
+}
+.navUI{
+    background: chartreuse;
+    margin-right: 0px;
+    right: 0px;
+    display: grid;
+    grid-template-columns:25% 25% 25% 25%; 
+    
+}
+
+/* contains model viewer, and model viewer navigation */
+.bigContainer{
+    position: absolute;
+    /* align-self: center; */
+    width: 100%;
+    max-width: 1282px;
+    height: 750;
+    max-height: 800px;
+}
+
+/* model list navigation div */
+#modelListNavDiv{
+    z-index: 100;
+    position: absolute;
+    background-color: red;
+    width: 7%;
+    height: 93%;
+    margin-left: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    border-radius: 0px 0px 0px 50px;
+    transition: width 0.2s;
+}
+#modelListNavDiv:hover{width: 33%;}
+
+/* canvas buttons */
+.modelViewBttnsDiv{
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 100%;
+    z-index: 100;
+    position:fixed;
+    right: 1%;   
+    background-color: rgba(0, 0, 0, 0.472);
+    margin-right: 3%;
+    margin-top: 1%;   
+    width: 60px;
+    padding: 3px;
+}
+#viewsDivImg{
+    width: 100%;
+}
+.bttn{
+    max-width: 428;
+    width: 100%;
+    opacity: 35%;
+    transition: opacity 0.5s;
+}
+.bttn:hover {opacity : 1;}
+
+
+/* model viewer div */
+#modelViewerDiv{
+    z-index: 1;
+    background-color: rgb(44, 243, 243);
+    margin-left: 7%;
+    /* margin-right: 10%; */
+    /* right: 100px; */
+    width:93%;
+    height: fit-content;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    max-width: 1282px;
+}
+
+#glCanvas{
+    background-color: gray;
+    width: 100%;
+    max-width: 1282;
+    height: fit-content;
+    margin-left: 0px;
+    margin-right: 10%;
+    margin-bottom: 0px;
+    bottom: 0px;
+    
+}
+

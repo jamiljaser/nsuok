@@ -1,0 +1,109 @@
+
+/* navigation */
+#navigationButtons{
+background-color: rgba(0,0,255,15%);
+text-align: center;
+text-shadow: 10vw;
+box-shadow: 10px 10px 100px blue;
+margin-bottom: 3%;
+}
+
+/* body */
+#pageHeader{
+    text-align: center;
+    font-size: 5vw;
+    color: blue;
+}
+/* about page*/
+#descriptionBox{
+    display: grid;
+    align-content: center;
+    max-width: 30%;
+    border: 10px solid blue;
+    margin-left: auto;
+    margin-right: auto;   
+}
+#tsalalinkImage{
+    max-width: 50%;
+    align-content: center;
+    align-self: center;
+    margin: auto;
+    margin-bottom: 30px;
+}
+#tsalalinkText{
+    font-size: 3vw;
+    text-align: center;
+}
+
+/* mapConsole */
+
+.wrapper{
+    margin-left: 10%;
+    margin-right: 10%;
+    max-width: 100%;   
+    padding-top: 2.5%;
+    padding-right: 5%;
+    padding-left: 2.5%;
+    padding-bottom: 5%;    
+    align-content: center;
+    text-align: center;
+    font-size:larger;
+    background-color: rgba(0,0,0,15%);
+    border:rgba(0,0,0,15%) 5px double;
+    gap: 10px;
+}
+
+#mapPrerequs{
+    max-width: 100%;
+    margin-right: 10%;
+    margin-left: 10%;
+}
+
+#missionDesc{
+    max-width: 100%;
+    border: black solid;
+    margin-top: 5%;
+}
+
+#mapImage{    
+    border: 5px rgba(0,0,0,50%) solid;
+    transform-origin: top;
+    transform: scaleY(.8);
+    max-width: 90%;
+}
+
+#mapName{
+    font-weight: bold;
+    font-style: italic;
+    text-decoration: wavy;
+}
+
+.mapMissionName{
+border: midnightblue solid;
+border-radius: 10%;
+padding: 10%;
+align-self:baseline;
+}
+
+.previousBttn{
+    margin-right: 16.5%;
+    border-radius: 20%;
+    box-shadow: rgba(0,0,0,50%) 3px 3px 2px;
+}
+
+.nextBttn{
+    margin-left: 16.5%;
+    border-radius: 20%;
+    box-shadow: rgba(0,0,0,50%) -3px 3px 2px;
+}
+
+#missionNameCanvas{
+    max-width: 90%;
+    align-self: center;
+    border-radius: 10%;
+    border: midnightblue double;
+}
+
+footer{
+    text-align: center;
+}
