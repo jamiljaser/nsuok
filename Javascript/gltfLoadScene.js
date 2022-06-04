@@ -29,12 +29,12 @@ const sizes = {
 }
 
 // modelCanvas Buttons Div declarations
-const modelBttn = document.getElementsByClassName("viewModel bttn");
-const scanBttn = document.getElementsByClassName("viewScan bttn");
+// const modelBttn = document.getElementsByClassName("viewModel bttn");
+// const scanBttn = document.getElementsByClassName("viewScan bttn");
 
 // Array Builder----------------------------
-const modelFolder = "../GLTF/";
-console.log(modelFolder);
+// const modelFolder = "./GLTF/";
+// console.log(modelFolder);
 
 // ----------------------------------------------------
 
@@ -56,7 +56,7 @@ new RGBELoader().load(hdrUrl2, texture => {
   })
 
 // GLTF Loader
-loader.load(' ../GLTF/brainScene.gltf', function(gltf){
+loader.load(' ./GLTF/brainScene.glb', function(gltf){
 // loader.load(' ../GLTF/ornateDisplayBox/ornateDisplayBox.gltf', function(gltf){
         // console.log(gltf)
         const root = gltf.scene;
@@ -155,42 +155,42 @@ function onWindowResize(){
 
 
 // dispose of geometry function
-function disposeOfGeometry(){    
-    scene.children.splice(scene.children[2]);
-}
+// function disposeOfGeometry(){    
+//     scene.children.splice(scene.children[2]);
+// }
 
 // Switch to the building associated with the button clicked
-function switchBuilding(){
-    // disposeOfGeometry();
-    console.log("switchBuilding Function Activated");
-    readDir();
-}
+// function switchBuilding(){
+//     // disposeOfGeometry();
+//     console.log("switchBuilding Function Activated");
+//     readDir();
+// }
 
-function arrayMaker(){
-    const modelArray = [];
-    modelArray[0] = ""; 
+// function arrayMaker(){
+//     const modelArray = [];
+//     modelArray[0] = ""; 
 
-}
+// }
 
-function readDir(){
-    // var fs = require('fs');
-    var fileAddress = "../GLTF/BaconeHouse/"
-    console.log(files);
+// function readDir(){
+//     // var fs = require('fs');
+//     var fileAddress = "../GLTF/"
+//     console.log(files);
     
-}
+// }
 
 // buttonMaker
-function buttonMkr(filename){
-// put this in a for statement
-    let bttn = document.createElement("button");
-    document.getElementById("bttnContainer").appendChild(bttn);
-    bttn.setAttribute("class", "modelListBttn");
-    bttn.setAttribute("id", filename)
-    // bttn.setAttribute("id", name this by concatination of the array item's file name minus the file format suffix)
-    bttn.addEventListener("click", switchBuilding, false);
+// function buttonMkr(filename){
+// // put this in a for statement
+//     let bttn = document.createElement("button");
+//     document.getElementById("bttnContainer").appendChild(bttn);
+//     bttn.setAttribute("class", "modelListBttn");
+//     bttn.setAttribute("id", filename)
+//     // bttn.setAttribute("id", name this by concatination of the array item's file name minus the file format suffix)
+//     bttn.addEventListener("click", switchBuilding, false);
     // console.log(scene.children)
 // end the for statement here
-}
+// }
 
 // animate function
 function animate(){
