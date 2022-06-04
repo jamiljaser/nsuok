@@ -39,18 +39,22 @@ const sizes = {
 // ----------------------------------------------------
 
 // HDRIs
-const hdrUrl = 'https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/1k/abandoned_greenhouse_1k.hdr'
+const hdrUrl = 'https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/1k/studio_small_08_1k.hdr'
 const hdrUrl2 = 'https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/1k/spruit_sunrise_1k.hdr'
+const hdrUrl3 ='https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/2k/blue_lagoon_night_2k.hdr'
+const hdrUrl4 ='./HDRI/whiteBG.hdr';
+
 // ----------------------------------------------------------------------------------------
 
 // HDRI Loader
-new RGBELoader().load(hdrUrl2, texture => {
+new RGBELoader().load(hdrUrl4, texture => {
     const gen = new THREE.PMREMGenerator(renderer)
     const envMap = gen.fromEquirectangular(texture).texture    
     // Interacts HDRI light with geometry
     texture.mapping = THREE.EquirectangularReflectionMapping;
     scene.environment = envMap
     scene.background = envMap
+    envMap.opacity = 0.1
     texture.dispose()
     gen.dispose()
   })
@@ -88,7 +92,7 @@ loader.load(' ./GLTF/brainScene.glb', function(gltf){
 
 // overhead spot light
 const lightOverhead = new THREE.SpotLight(0xffff11, 1)
-lightOverhead.position.set(0,1,0)
+lightOverhead.position.set(0,10,0)
 lightOverhead.castShadow = true;
 lightOverhead.shadow.bias = -0.0001;
 lightOverhead.shadow.mapSize.width = 1024*4;
@@ -117,7 +121,7 @@ scene.add(lightOverhead)
 // -------------------------------------------------------------------------
 
 // Camera and renderer declarations
-const camera = new THREE.PerspectiveCamera(50, sizes.width / sizes.height, 0.01, 10000)
+const camera = new THREE.PerspectiveCamera(35, sizes.width / sizes.height, 0.01, 10000)
 camera.position.set(-15, 0.5, 8)
 scene.add(camera)
 camera.lookAt(0, 0.5, 0)
