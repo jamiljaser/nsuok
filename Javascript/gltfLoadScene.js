@@ -56,11 +56,11 @@ new RGBELoader().load(hdrUrl2, texture => {
   })
 
 // GLTF Loader
-loader.load(' ../GLTF/BaconeHouse/BaconeHouseScanTsalageek2022-draco2.gltf', function(gltf){
+loader.load(' ../GLTF/brainScene.glb', function(gltf){
 // loader.load(' ../GLTF/ornateDisplayBox/ornateDisplayBox.gltf', function(gltf){
         // console.log(gltf)
         const root = gltf.scene;
-        root.scale.set(500,500,500)
+        root.scale.set(1,1,1)
         let mesh = gltf.scene.children[0];
         
         // fixes shadow artifacts
@@ -83,11 +83,11 @@ loader.load(' ../GLTF/BaconeHouse/BaconeHouseScanTsalageek2022-draco2.gltf', fun
 // LIGHTS declarations
 
 // Hemisphere Light
-const hemiLight = new THREE.HemisphereLight(0xffeeb1, 0x080820, 8);
-scene.add(hemiLight);
+// const hemiLight = new THREE.HemisphereLight(0xffeeb1, 0x080820, 8);
+// scene.add(hemiLight);
 
 // overhead spot light
-const lightOverhead = new THREE.SpotLight(0xffff11, 7)
+const lightOverhead = new THREE.SpotLight(0xffff11, 1)
 lightOverhead.position.set(0,1,0)
 lightOverhead.castShadow = true;
 lightOverhead.shadow.bias = -0.0001;
@@ -99,25 +99,25 @@ scene.add(lightOverhead)
 
 
 // GEOMETRY declarations
-const plane = new THREE.PlaneGeometry(100,100);
+// const plane = new THREE.PlaneGeometry(100,100);
     // greenMaterial
-const materialGreen = new THREE.MeshBasicMaterial({
-    color: 0x00ff00
-});
+// const materialGreen = new THREE.MeshBasicMaterial({
+//     color: 0x00ff00
+// });
 
-    // purpleMaterial
-const materialPurple = new THREE.MeshBasicMaterial({
-    color: 0xff00ff, side: THREE.Doubleside
-});
+//     // purpleMaterial
+// const materialPurple = new THREE.MeshBasicMaterial({
+//     color: 0xff00ff, side: THREE.Doubleside
+// });
     // groundPlane
-const groundPlane = new THREE.Mesh(plane, materialPurple)
-scene.add(groundPlane)
-groundPlane.rotateX(-33)
-groundPlane.position.set(0,-1.25,0)
+// const groundPlane = new THREE.Mesh(plane, materialPurple)
+// scene.add(groundPlane)
+// groundPlane.rotateX(-33)
+// groundPlane.position.set(0,-1.25,0)
 // -------------------------------------------------------------------------
 
 // Camera and renderer declarations
-const camera = new THREE.PerspectiveCamera(18, sizes.width / sizes.height, 0.01, 10000)
+const camera = new THREE.PerspectiveCamera(50, sizes.width / sizes.height, 0.01, 10000)
 camera.position.set(-15, 0.5, 8)
 scene.add(camera)
 camera.lookAt(0, 0.5, 0)
