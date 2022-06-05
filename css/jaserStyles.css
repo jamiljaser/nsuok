@@ -4,3 +4,4 @@ a{color: greenyellow; text-align: center; margin-left: 1%; padding-left: 1%; pad
 .navDiv{text-align: center;}
 #brainRhythmsVid{width: 30%; display: inline-block; margin-left: 5%;}
 .prose{color: green; display: inline-block; font-size: larger; padding-left: 3%; margin-left: 5%; margin-bottom: 3%;}
+#someclass{width:100%;}
