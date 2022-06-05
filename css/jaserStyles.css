@@ -1,0 +1,6 @@
+body{background-color: black;}
+h1{color: white; text-align: center;}
+a{color: greenyellow; text-align: center; margin-left: 1%; padding-left: 1%; padding-right: 1%; font-size: larger; border: 1px; border-color: greenyellow; border-style: solid;}
+.navDiv{text-align: center;}
+#brainRhythmsVid{width: 30%; display: inline-block; margin-left: 5%;}
+.prose{color: green; display: inline-block; font-size: larger; padding-left: 3%; margin-left: 5%; margin-bottom: 3%;}
