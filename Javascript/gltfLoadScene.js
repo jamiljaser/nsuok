@@ -24,8 +24,8 @@ loader.setDRACOLoader(myDracoLoader)
     
 // Declarations For Screen Resizing
 const sizes = {
-    width: window.innerWidth * 0.85,
-    height: window.innerHeight * 0.8,
+    width: window.innerWidth * 0.5,
+    height: window.innerHeight * 0.66,
 }
 
 // modelCanvas Buttons Div declarations
@@ -213,5 +213,5 @@ function animate(){
 
 // FUNCTION CALLS____________________________________
 animate();
-buttonMkr();
+// buttonMkr();
 console.log(scene.children);

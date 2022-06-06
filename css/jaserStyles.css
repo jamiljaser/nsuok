@@ -1,7 +1,23 @@
-body{background-color: black;}
+body{background-color: black; min-width: 500px;}
 h1{color: white; text-align: center;}
 a{color: greenyellow; text-align: center; margin-left: 1%; padding-left: 1%; padding-right: 1%; font-size: larger; border: 1px; border-color: greenyellow; border-style: solid;}
-.navDiv{text-align: center;}
-#brainRhythmsVid{width: 30%; display: inline-block; margin-left: 5%;}
-.prose{color: green; display: inline-block; font-size: larger; padding-left: 3%; margin-left: 5%; margin-bottom: 3%;}
-#someclass{width:100%;}
+.navDiv{text-align: center; padding-bottom: 2%;}
+.prose{color: rgb(43, 210, 43); display: inline-block; font-size: larger; padding-left: 3%; margin-left: 5%; }
+.prose2{color: rgba(204, 204, 204, 0.732); font-size: larger; max-width: 800px; position:relative;}
+.indent{text-indent: 3%;}
+li{padding-bottom: 5%; font-size:medium ;}
+
+#brainRhythmsVid{width: 30%; min-width:400px; display: inline-block; margin-left: 5%;}
+
+#boxesDiv{width: 52%; height: 33%;}
+.yellowBox{min-width: 800px; float: left; display: inline; width: 22.8%; height:auto; border: 10px; border-color: yellow; border-style: solid; font-size: large; color: blue; background-color: rgb(182, 182, 182); margin-bottom: 2%;}
+.greenBox{min-width: 800px; float: left; display: inline; width: 22.8%; height:auto; border: 10px; border-color:green; border-style: solid; font-size: large; color: blue; background-color: rgb(182, 182, 182); margin-bottom: 2%;}
+.redBox{min-width: 800px; float: left; display: inline; width: 22.8%; height:auto; border: 10px; border-color: red; border-style: solid; font-size: large; color: blue; background-color: rgb(182, 182, 182); margin-bottom: 2%;}
+.blueBox{min-width: 800px; float: left; display: inline; width: 22.8%; height:auto; border: 10px; border-color:rgb(113, 201, 216); border-style: solid; font-size: large; color: blue; background-color: rgb(182, 182, 182); margin-bottom: 2%;}
+.rhythms{width: 40%; border: 5px; border-style: solid; border-color: rgba(0, 100, 0, 0.5); min-width: 700px;}
+.references{margin-top: 3%; text-align: center;}
+#refTitle{text-align: center; align-self: center;}
+.bordered{ min-width: 600px; border: 3px; border-style: solid; border-color: green; padding-left: 3%; padding-right: 3%; display:flexbox ; width: 37%;}
+.flex{display: flex; max-width: 66%;}
+.rightMargin{max-width: 80%; min-width: 800px;}
+.rhythmIMG{max-width: 1000px; min-width: 300px;  margin-left: 15%; margin-right: 15%;}
